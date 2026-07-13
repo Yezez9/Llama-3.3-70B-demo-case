@@ -8,14 +8,19 @@ import os
 
 def get_api_key():
     """Load the Groq API key from Streamlit secrets or environment variable."""
+    # Try Streamlit secrets first (works on Streamlit Community Cloud)
     try:
-        return st.secrets["GROQ_API_KEY"]
-    except (FileNotFoundError, KeyError):
-        key = os.environ.get("GROQ_API_KEY")
-        if not key:
-            st.error("⚠️ Groq API key not found. Please set it in `.streamlit/secrets.toml` or as an environment variable `GROQ_API_KEY`.")
-            st.stop()
+        key = st.secrets["GROQ_API_KEY"]
+        if key:
+            return key
+    except Exception:
+        pass
+    # Fallback to environment variable (works locally)
+    key = os.environ.get("GROQ_API_KEY", "")
+    if key:
         return key
+    st.error("⚠️ Groq API key not found. Please set it in `.streamlit/secrets.toml` or as an environment variable `GROQ_API_KEY`.")
+    st.stop()
 
 client = Groq(api_key=get_api_key())
 

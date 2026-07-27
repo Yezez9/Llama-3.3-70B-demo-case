@@ -1,2 +1,4 @@
 # Streamlit secrets (contains API keys)
 .streamlit/secrets.toml
+
+.vercel

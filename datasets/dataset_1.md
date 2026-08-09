@@ -29,3 +29,28 @@ Team scoring explains only 47% of win percentage (R² = 0.471) — shot volume a
 - Dataset only contains box-score stats — no defensive matchup data, coaching, payroll, or roster-construction data.
 - SGA/OKC case study is a single data point and does not establish causation.
 - No multicollinearity testing between FGA and FTA in the regression (high-volume scorers likely also draw more fouls, so these predictors may be correlated with each other).
+
+## Additional Chart Data — NBA
+
+**League-wide averages (all players, all teams):**
+Average points per player: 10.61 | Win-loss ratio: 1.01 | Free throw rate: 76.57% 
+| Field goal rate: 45.54%
+
+**League-wide shooting composition (share of scoring makes):**
+Field goal: 109,665 (57.68%) | Free throw: 44,907 (23.62%) | 3-point: 35,565 (18.7%)
+
+**Top 10 teams by win rate (highest to lowest):**
+OKC, CLE, BOS, MIN, NYK, IND, DEN, GSW, MEM, ORL
+
+**Shai Gilgeous-Alexander (SGA) — filtered dashboard view:**
+Average points: 31.93 | Win-loss ratio: 3.76 | Free throw rate: 89.63% | 
+Field goal rate: 51.06%
+Shooting composition: Field goal 1,101 (0.58%), Free throw 794 (0.42%), 
+3-point 197 (0.1%)
+
+**Feature importance for predicting player points (standardized coefficient, ranked):**
+FGA (~6.2, highest), FTA (~2.2), 3PA (~0.35), MP (~0.3), AST (~0.1), TRB (~0.05), 
+BLK (~0.05), TOV (~0.03), STL (~0.03)
+
+**Team scoring vs. win percentage:** R² = 0.471, scatter ranges from ~105 to 
+~121.7 average team points per game, with win percentage ranging roughly 21% to 79%.

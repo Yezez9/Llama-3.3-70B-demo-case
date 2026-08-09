@@ -25,3 +25,16 @@ European soccer is won primarily through technical mastery, not pure physical do
 - Goalkeeper stat dilution: averaging skills across all 11 players waters down the goalkeeper's specific stats (outfield players have very low goalkeeping scores), masking the goalkeeper's true impact.
 - Missing live context: dataset relies on video-game skill ratings and ignores real-world variables like red cards, weather changes, or home-crowd psychological effects.
 - Missing historical lineups: ~25% of matches were discarded due to missing starting lineup records for older games.
+
+## Additional Chart Data — Euro Soccer
+
+**Top 15 differential player attributes correlated with home win (Pearson r):**
+diff_overall_rating (0.44), diff_potential (0.42), diff_reactions (0.42), 
+diff_ball_control (0.40), diff_short_passing (0.39), diff_vision (0.37), 
+diff_long_passing (0.37), diff_dribbling (0.36), diff_positioning (0.35), 
+diff_crossing (0.34), diff_volleys (0.33), diff_finishing (0.33), 
+diff_shot_power (0.33), diff_curve (0.32), diff_long_shots (0.32)
+
+**Impact of categorized attributes on match win probability (logistic regression coefficient):**
+cat_technical (0.102), cat_physical (0.055), cat_defensive (0.053), 
+cat_goalkeeping (0.047), cat_attacking (0.037)

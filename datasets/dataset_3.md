@@ -27,3 +27,22 @@ FIFA 22 models football success as skill-driven rather than purely athletic. The
 - Missing data: national-team fields absent for ~96% of players; loan data missing for ~94%.
 - Correlation ≠ causation: strong correlations (e.g. reactions vs overall) don't prove direct influence — may reflect shared scouting judgments.
 - Market noise: wages/values shaped by external factors (agents, budgets, marketability) not captured in the dataset.
+
+## Additional Chart Data — FIFA
+
+**Top correlates with overall rating (Pearson r):**
+movement_reactions (0.87), passing (0.72), mentality_composure (0.71), 
+dribbling (0.67), potential (0.64), wage_eur (0.60), power_shot_power (0.56), 
+value_eur (0.55)
+
+**Mental/technical vs. physical attributes (Pearson r):**
+movement_reactions (0.87), mentality_composure (0.71), passing (0.72), 
+pace (0.17), power_strength (0.36), movement_sprint_speed (0.21)
+
+**Average overall rating by position:**
+Midfielder (66.0), Forward (65.9), Defender (65.9), Goalkeeper (64.4)
+
+**Average market value by contract time remaining:**
+0-1 yrs left (€2.0M), 2 yrs left (€4.5M), 3 yrs left (€5.5M), 4+ yrs left (€9.3M)
+
+**Overall rating distribution:** n = 19,239, mean = 65.8

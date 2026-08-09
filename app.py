@@ -41,11 +41,11 @@ DATASETS = {
 
 # Color assignments for each dataset label (used in tags and checkboxes)
 DATASET_COLORS = {
-    "NBA":      "#00c853",
-    "F1":       "#78909c",
-    "FIFA":     "#ff1744",
-    "Soccer":   "#78909c",
-    "Olympics": "#78909c",
+    "NBA":      "#0000FF",
+    "F1":       "#FF0000",
+    "FIFA":     "#FF00C8",
+    "Soccer":   "#00FF11",
+    "Olympics": "#00C7FF"
 }
 
 # Auto-included when ALL 5 datasets above are checked

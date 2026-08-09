@@ -733,7 +733,7 @@ if scope_html:
 user_input = st.chat_input("Ask about player stats, team performance, or cross-dataset comparisons...")
 
 # Disclaimer footer
-st.markdown('<div class="disclaimer">Stadium AI can make mistakes. Verify critical stats. MADE BY GROUP 5</div>', unsafe_allow_html=True)
+st.markdown('<div class="disclaimer">Stadium AI can make mistakes, FOR DEMO PURPOSES ONLY. MADE BY GROUP 5</div>', unsafe_allow_html=True)
 
 # ============================================
 # Chat Input Processing

@@ -659,7 +659,7 @@ def render_feedback_row():
     return """
     <div class="feedback-row">
         <span class="feedback-btn">MADE BY GROUP 5</span>
-        <span class="feedback-btn">HANSEL, LANCE, DARDY, MARC, RALPH</span>
+        <span class="feedback-btn">LANCE, MARC, HASNEL, RALPH, DARDY</span>
     </div>
     """
 

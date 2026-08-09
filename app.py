@@ -658,8 +658,8 @@ def render_feedback_row():
     """Render the Helpful / Report Issue feedback buttons."""
     return """
     <div class="feedback-row">
-        <span class="feedback-btn">Helpful</span>
-        <span class="feedback-btn">Report Issue</span>
+        <span class="feedback-btn">MADE BY GROUP 5</span>
+        <span class="feedback-btn">HANSEL, LANCE, DARDY, MARC, RALPH</span>
     </div>
     """
 

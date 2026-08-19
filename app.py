@@ -4,6 +4,7 @@ import sys
 import re
 from datetime import datetime
 from groq import Groq
+import groq  # for groq.APIStatusError
 
 # ============================================
 # Groq API Client
@@ -11,17 +12,25 @@ from groq import Groq
 
 def get_api_key():
     """Load the Groq API key from Streamlit secrets or environment variable."""
+    source = None
+    key = None
     try:
         key = st.secrets["GROQ_API_KEY"]
         if key:
-            return key
+            source = "st.secrets"
     except Exception:
         pass
-    key = os.environ.get("GROQ_API_KEY", "")
-    if key:
-        return key
-    st.error("⚠️ Groq API key not found. Set it in `.streamlit/secrets.toml` or as env var `GROQ_API_KEY`.")
-    st.stop()
+    if not key:
+        key = os.environ.get("GROQ_API_KEY", "")
+        if key:
+            source = "env var"
+    if not key:
+        print("[STARTUP] ❌ GROQ_API_KEY is MISSING from both st.secrets and env var.", flush=True)
+        st.error("⚠️ Groq API key not found. Set it in `.streamlit/secrets.toml` or as env var `GROQ_API_KEY`.")
+        st.stop()
+    # Confirm key is loaded without printing the actual value
+    print(f"[STARTUP] ✅ GROQ_API_KEY loaded from {source} | length={len(key)} | prefix={key[:8]}...", flush=True)
+    return key
 
 client = Groq(api_key=get_api_key())
 
@@ -148,15 +157,38 @@ def call_llm(prompt):
         print(output.encode("ascii", errors="replace").decode("ascii"))
 
     # --- Real Groq API call using GPT OSS 120B ---
-    response = client.chat.completions.create(
-        model="openai/gpt-oss-120b",
-        messages=[
-            {"role": "system", "content": prompt},
-        ],
-        temperature=0.7,
-        max_tokens=1024,
-    )
-    return response.choices[0].message.content
+    try:
+        response = client.chat.completions.create(
+            model="openai/gpt-oss-120b",
+            messages=[
+                {"role": "system", "content": prompt},
+            ],
+            temperature=0.7,
+            max_tokens=1024,
+        )
+        return response.choices[0].message.content
+    except groq.APIStatusError as err:
+        # Surface the REAL error to the terminal (Streamlit redacts it in the UI)
+        diag = (
+            "\n" + "!" * 60 + "\n"
+            "GROQ API ERROR — REAL DETAILS\n"
+            + "!" * 60 + "\n"
+            f"  Status Code : {err.status_code}\n"
+            f"  Error Body  : {getattr(err, 'body', 'N/A')}\n"
+        )
+        # Try to get the raw response text
+        try:
+            diag += f"  Response Txt: {err.response.text}\n"
+        except Exception:
+            diag += "  Response Txt: (unable to read)\n"
+        diag += f"  str(err)    : {str(err)}\n"
+        diag += "!" * 60 + "\n"
+        try:
+            sys.stdout.buffer.write(diag.encode("utf-8", errors="replace"))
+            sys.stdout.buffer.flush()
+        except Exception:
+            print(diag, flush=True)
+        raise  # re-raise so Streamlit still shows the error page
 
 
 # ============================================

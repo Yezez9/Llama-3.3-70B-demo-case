@@ -25,11 +25,6 @@ Checking all 10 top scorers against team win-rate rank shows the "elite scorer =
 ## Overall Story
 Team scoring explains only 47% of win percentage (R² = 0.471) — shot volume and attempts, while the strongest predictors of individual point totals (R² = 0.844), are necessary but not sufficient to explain wins. The remaining ~53% likely reflects factors outside this dataset (defense, opponent strength, clutch execution, bench depth). Scoring is the floor, not the ceiling, for winning.
 
-## Limitations
-- Dataset only contains box-score stats — no defensive matchup data, coaching, payroll, or roster-construction data.
-- SGA/OKC case study is a single data point and does not establish causation.
-- No multicollinearity testing between FGA and FTA in the regression (high-volume scorers likely also draw more fouls, so these predictors may be correlated with each other).
-
 ## Additional Chart Data — NBA
 
 **League-wide averages (all players, all teams):**

@@ -21,11 +21,6 @@ The ratio of right-footed to left-footed players on the pitch offers zero compet
 ## Overall Story
 European soccer is won primarily through technical mastery, not pure physical dominance. Victory is systematically driven by game intelligence, precise passing, and ball retention — a team that controls the pace and space of a match has a consistently higher win chance than one relying on speed or isolated shooting power. In short: brains and ball control beat brawn.
 
-## Limitations
-- Goalkeeper stat dilution: averaging skills across all 11 players waters down the goalkeeper's specific stats (outfield players have very low goalkeeping scores), masking the goalkeeper's true impact.
-- Missing live context: dataset relies on video-game skill ratings and ignores real-world variables like red cards, weather changes, or home-crowd psychological effects.
-- Missing historical lineups: ~25% of matches were discarded due to missing starting lineup records for older games.
-
 ## Additional Chart Data — Euro Soccer
 
 **Top 15 differential player attributes correlated with home win (Pearson r):**

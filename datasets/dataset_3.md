@@ -21,13 +21,6 @@ Longer contracts are concentrated among higher-rated, higher-value players. Play
 ## Overall Story
 FIFA 22 models football success as skill-driven rather than purely athletic. The highest-rated players excel in mental/technical attributes (reactions, passing, composure) that capture decision-making speed and technical precision, while physical traits (pace, strength) show weak influence. This skill-centric pattern extends into economics: Forwards earn the most despite not rating highest, and clubs invest long-term contracts in players who are already highly rated and valuable — resources concentrate around proven, already-valuable talent rather than being distributed evenly.
 
-## Limitations
-- Subjective ratings: Overall/potential/attributes are scout-assigned by Sofifa/EA, not measured from real matches — introduces human bias (e.g. reputation bias toward star players).
-- Snapshot in time: reflects FIFA 22 only, not career trajectories or in-season changes.
-- Missing data: national-team fields absent for ~96% of players; loan data missing for ~94%.
-- Correlation ≠ causation: strong correlations (e.g. reactions vs overall) don't prove direct influence — may reflect shared scouting judgments.
-- Market noise: wages/values shaped by external factors (agents, budgets, marketability) not captured in the dataset.
-
 ## Additional Chart Data — FIFA
 
 **Top correlates with overall rating (Pearson r):**

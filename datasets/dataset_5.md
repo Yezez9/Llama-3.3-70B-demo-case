@@ -22,12 +22,6 @@ Olympic medalist age peaks sharply at 24, with most medals concentrated between 
 ## Overall Story
 Olympic success has historically concentrated in a small group of wealthy, well-resourced nations, but participation and competitiveness have broadened significantly over the last century. A handful of exceptional athletes can dominate medal tallies, and the structure of the Games itself (which sports are included, when Winter/Summer are held) shapes medal counts as much as athletic performance does.
 
-## Limitations
-- Dataset stops at Rio 2016 — excludes Tokyo 2020, Beijing 2022, Paris 2024; any "present-day" ranking is outdated.
-- Early Olympics (1896–1920s) had far fewer participating nations and almost no female athletes, inflating the apparent dominance of a few countries.
-- Team events count every member of a winning team as a separate medal-winning row, distorting individual-athlete comparisons.
-- National boundary changes (e.g. USSR → Russia, East/West Germany → Germany) complicate long-term country-level comparisons without careful NOC-to-country mapping.
-
 ## Additional Chart Data — Olympics
 
 **Top 10 countries by total medal count (Gold+Silver+Bronze, approx.):**

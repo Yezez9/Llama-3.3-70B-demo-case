@@ -21,13 +21,6 @@ F1's points system only rewards the top 10 finishers out of ~22 active drivers o
 ## Overall Story
 F1 is shaped by Eurocentric dominance, mechanical/constructor hierarchies, and structural exclusivity. Starting position and car reliability matter more than raw driver skill in determining outcomes. The sport lacks recognition outside Western regions (particularly Africa and Asia) due to high barriers to entry. Race outcomes are heavily decided by engineering and constructor investment, not solely driver skill.
 
-## Limitations
-- No data on car specifications, track conditions, or granular match details.
-- European dominance may introduce fan-support/data bias (Eurocentric bias).
-- Survivorship bias: lap time data only reflects drivers who completed the race.
-- Historical bias: dataset spans 1950–2024, during which rules changed significantly (scoring adapted to modern standards for this analysis).
-- No predictive modeling attempted — lack of car spec/track condition data makes this unreliable.
-
 ## Additional Chart Data — F1
 
 Grand Prix duration over time: Race duration was highly volatile and much 

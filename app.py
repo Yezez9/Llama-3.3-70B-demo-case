@@ -121,7 +121,7 @@ def build_prompt(checked_datasets, user_question):
 
 
 def call_llm(prompt):
-    """Send the assembled prompt to the LLM (Groq — Llama 3.3 70B) and return the response.
+    """Send the assembled prompt to the LLM (Groq — GPT OSS 120B) and return the response.
 
     This is the ONE function you'd change to swap providers
     (OpenAI, Anthropic, Gemini, etc.). Nothing else in the app needs to change.
@@ -147,9 +147,9 @@ def call_llm(prompt):
     except Exception:
         print(output.encode("ascii", errors="replace").decode("ascii"))
 
-    # --- Real Groq API call using Llama 3.3 70B ---
+    # --- Real Groq API call using GPT OSS 120B ---
     response = client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
+        model="openai/gpt-oss-120b",
         messages=[
             {"role": "system", "content": prompt},
         ],

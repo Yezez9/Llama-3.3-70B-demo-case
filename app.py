@@ -25,11 +25,11 @@ def get_api_key():
         if key:
             source = "env var"
     if not key:
-        print("[STARTUP] ❌ GROQ_API_KEY is MISSING from both st.secrets and env var.", flush=True)
-        st.error("⚠️ Groq API key not found. Set it in `.streamlit/secrets.toml` or as env var `GROQ_API_KEY`.")
+        print("[STARTUP] FAIL: GROQ_API_KEY is MISSING from both st.secrets and env var.", flush=True)
+        st.error("Groq API key not found. Set it in `.streamlit/secrets.toml` or as env var `GROQ_API_KEY`.")
         st.stop()
     # Confirm key is loaded without printing the actual value
-    print(f"[STARTUP] ✅ GROQ_API_KEY loaded from {source} | length={len(key)} | prefix={key[:8]}...", flush=True)
+    print(f"[STARTUP] OK: GROQ_API_KEY loaded from {source} | length={len(key)} | prefix={key[:8]}...", flush=True)
     return key
 
 client = Groq(api_key=get_api_key())
